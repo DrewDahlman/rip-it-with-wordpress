@@ -6,8 +6,8 @@ module.exports = {
   "dev": process.env.NODE_ENV == "production" ? "wordpress/wp-content/themes/ripit" : "/app/wp-content/themes/ripit", // Directory for dev assets to compile to
   "prod": process.env.NODE_ENV == "production" ? "wordpress/wp-content/themes/tmp" : "/app/wp-content/themes/tmp", // Directory for tmp build assets to compile to
   "sources": [], // Empty holder
-  "assetPath": "/src/src", // Source
-  "watchPath": "/src/src", // Watch source
+  "assetPath": process.env.NODE_ENV == "production" ? "./src" : "/src/src", // Source
+  "watchPath": process.env.NODE_ENV == "production" ? "./src" : "/src/src", // Watch
 
   // Build specific settings
   "build": {

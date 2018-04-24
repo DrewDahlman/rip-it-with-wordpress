@@ -1,5 +1,5 @@
 # rip-it-with-wordpress
-A cool place to start with wordpress & Gulp.
+A cool place to start with Wordpress & Gulp.
 
 ## Getting Started
 - Run `npm install`
