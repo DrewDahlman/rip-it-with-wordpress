@@ -2,17 +2,15 @@
 A cool place to start with Wordpress & Gulp.
 
 ## Getting Started
-- Run `npm install`
-- Run `gulp`
-  - If you get an error running `gulp`, try running `npm i -g gulp-cli`
-- Check'r out http://localhost:4000
+- Run `docker-compose up`
+- Check it out at `http://localhost:8080`
 
 ## Configure
-You can set basic configurations for your particular setup as well as app meta and build details in the `gulp/config.js` file.
+You can set basic configurations for your particular setup as well as app meta and build details in the `build-files/gulp/config.js` file.
 
 ## Dist
 To create a dist build, minified with source maps.
-- run `gulp dist -e production`
+- run `docker-compose run builder gulp dist -e production`
 
 ## Templates & Markup
 Templates & Markup are handled by [mustache](https://mustache.github.io/) which allows us to create partials for common used components as well as environment based markup.
@@ -28,12 +26,12 @@ The project starts off with `lodash`, `jQuery`, `mustache` and `modernizr` prebu
 ## Dependency Management
 Need to add a dependency? There are couple ways to do that.
   - Perfile require:
-    - `npm install YOUR_DEP_PACKAGE --save`
+    - `docker-compose exec builder npm install YOUR_DEP_PACKAGE --save`
     - Then in places you need it `import MY_PACKAGE from 'my-package'` and use in files you need it.
 
   - Global Dependency
     - `npm install YOUR_DEP_PACKAGE --save`
-    - In `gulp/webpack/plugins/plugins.js` add the plugin
+    - In `build-files/gulp/webpack/plugins/plugins.js` add the plugin
 
       ```javascript
       new webpack.ProvidePlugin({
@@ -52,7 +50,7 @@ This project is built on top of a number of different tools best suited for thei
 
 - Gulp
   - Task management
-  - Configuration ( `gulp/config.js` )
+  - Configuration ( `build-files/gulp/config.js` )
   - Reving files
   - Watching file changes
   - Compressing images
@@ -86,7 +84,7 @@ This project is built on top of a number of different tools best suited for thei
 ## Deployment as a static site to s3
 The project comes with a built in `deploy-static-aws` task that will run a dist and pipe the files to s3 for a static site hosting. You can run `gulp deploy-static-aws -e production` and it will run a production dist as well.
 
-In order to use this make sure you have configured your `~/.aws/credentials` file for the user with the access key and secret, as well as the `gulp/config.js` with the identity to use, the bucket and the region.
+In order to use this make sure you have configured your `~/.aws/credentials` file for the user with the access key and secret, as well as the `build-files/gulp/config.js` with the identity to use, the bucket and the region.
 
 ## Deploy assets
 Sometimes you may want to just deploy assets to s3, this can be done with `gulp deploy-assets`. This will upload all assets to the s3 bucket specified in the config.js and do a replace on any references to those assets in html, css and js.
