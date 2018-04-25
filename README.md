@@ -1,6 +1,11 @@
 # rip-it-with-wordpress
 A cool place to start with Wordpress & Gulp.
 
+## Overview
+The idea with this boilerplate is to allow you to quickly spin up and start coding a wordpress site. You will never edit the theme directly, rather use the `src` for that. Everything in there will be piped into the actual wordpress themes.
+
+When adding a plugin simply add it to your plugins directory and use as normal.
+
 ## Getting Started
 - Run `docker-compose up`
 - Check it out at `http://localhost:8080`
