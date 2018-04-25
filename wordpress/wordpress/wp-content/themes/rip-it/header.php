@@ -24,8 +24,8 @@
 
     <link rel="stylesheet" href="/wp-content/themes/ripit/css/app.css">
 
-    <script src="/wp-content/themes/ripit/scripts/commons.js"></script>
-    <script src="/wp-content/themes/ripit/scripts/modernizr-bundle.js"></script>
+    <script src="/wp-content/themes/ripit/scripts/commons-0b4ded61c4.js"></script>
+    <script src="/wp-content/themes/ripit/scripts/modernizr-bundle-e8d072d409.js"></script>
 
     <script>
 	    var BASE_URL = '<?= get_template_directory_uri(); ?>';

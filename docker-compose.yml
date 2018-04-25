@@ -11,6 +11,7 @@ services:
     volumes:
       - ./data:/data # Required if importing an existing database
       - ./wordpress:/app
+      - ./wordpress:/tmp
     environment:
       DB_NAME: wordpress
       DB_PASS: root # must match below
