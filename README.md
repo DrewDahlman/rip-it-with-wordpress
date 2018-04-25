@@ -111,15 +111,6 @@ run `gulp --tasks`
 │   └─┬ parallel
 │     ├── watch
 │     └── server
-├─┬ deploy-assets
-│ └─┬ series
-│   ├── dist
-│   ├── aws
-│   └── replace
-├─┬ deploy-static-aws
-│ └─┬ series
-│   ├── dist
-│   └── aws
 ├─┬ dist
 │ └─┬ series
 │   ├── clean
