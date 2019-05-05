@@ -1,4 +1,4 @@
-FROM node:6
+FROM node:11-stretch
 
 RUN apt-get update -qq && apt-get install -y build-essential
 RUN apt-get install -y ruby openssh-server openssh-client ruby-dev
