@@ -28,12 +28,6 @@ module.exports = {
   devPlugins: () => {
     let plugins = [
       new webpack.ProvidePlugin({
-        "window.jQuery"    : "jquery",
-        "window.$"         : "jquery",
-        "jQuery"           : "jquery",
-        "$"                : "jquery"
-      }),
-      new webpack.ProvidePlugin({
         Mustache: "mustache"
       }),
       new webpack.ProvidePlugin({
@@ -54,12 +48,6 @@ module.exports = {
   },
   prodPlugins: () => {
     let plugins = [
-      new webpack.ProvidePlugin({
-        "window.jQuery"    : "jquery",
-        "window.$"         : "jquery",
-        "jQuery"           : "jquery",
-        "$"                : "jquery"
-      }),
       new webpack.ProvidePlugin({
         Mustache: "mustache"
       }),
